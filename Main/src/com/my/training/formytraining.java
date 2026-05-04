@@ -5,24 +5,23 @@ import java.util.Scanner;
 public class formytraining {
 
 	public static void main(String[] args) {
-		//trainin3
+		//trainin4
 		Scanner sc = new Scanner(System.in);
 		
-		int y, x, par, impar;
-		par = 0;
-		impar= 0;
+		int x, y;
+		System.out.print("Informe um numero qualquer: ");
+		y = sc.nextInt();
 		do {
 			System.out.print("Digite um número: ");
 			x = sc.nextInt();
-			if (x % 2 == 0) {
-				par++;
-			} else {
-				impar++;
-			}
-			System.out.println("Deseja parar, digite -1:");
-			y = sc.nextInt();
-		} while (y != -1);
-		System.out.println("A quantidade de números impares é: " + impar + " e a quantidade de números pares é: " + par);
+			if (x == 0) {
+				break;
+			} else if (x < y) {
+				y = x;
+			} 
+		}
+		while (x != 0);
+		System.out.println("O menor numeo digitado é: " + y);
 		
 		sc.close();
 	}
