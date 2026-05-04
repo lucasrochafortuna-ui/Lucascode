@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class formytraining {
 
 	public static void main(String[] args) {
-		//trainin3.0
+		//trainin3
 		Scanner sc = new Scanner(System.in);
 		
 		int y, x, par, impar;
