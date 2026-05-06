@@ -1,4 +1,4 @@
-package question6;
+package question06;
 
 import java.util.Scanner;
 
