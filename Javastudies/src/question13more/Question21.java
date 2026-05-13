@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Question21 {
 
 	public static void main(String[] args) {
-		// training 21
+		// training 21 (dividers)
 		Scanner sc = new Scanner(System.in);
 
 		System.out.print("Informe um número para saber seus divisores: ");

@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Question22 {
 
 	public static void main(String[] args) {
-		// training 22
+		// training 22 (lines)
 		Scanner sc = new Scanner(System.in);
 		
 		System.out.println("Informe quantas linhas serão mostradas");

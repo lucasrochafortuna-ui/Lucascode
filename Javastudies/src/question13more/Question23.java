@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Question23 {
 
 	public static void main(String[] args) {
-		// training 23
+		// training 23 (Celsius for Fahrenheit)
 		Scanner sc = new Scanner(System.in);
 		
 		char y;
