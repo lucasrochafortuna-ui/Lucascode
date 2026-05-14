@@ -8,6 +8,7 @@ public class Arrays2 {
 		// training 2
 		Scanner sc = new Scanner(System.in);
 		
+		//lê 8 números digitados pelo usuario e os multiplica  
 		int[] vector = new int [8];
 		int i, multiplicação = 1;
 		System.out.println("Digite 8 números");
