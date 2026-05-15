@@ -29,6 +29,7 @@ public class Arrays05 {
 				continue;
 			}
 		}
+		cont = 0;
 		System.out.println("Informe 10 valores em ordem crescente: ");
 		for (int i = 0 ; i < vector2.length ; i++) {
 			vector2[i] = sc.nextInt();
@@ -45,26 +46,36 @@ public class Arrays05 {
 				continue;
 			}
 		}
-		for (int i = 0 ; i < vector3.length; i++) {
-			for (i = 0 ; i < 2; i++) {
-				vector3[i] = vector1[i];
-			}
-			int j = 0;
-			for (i = 2 ; i < 4; i++) {
+		int j = 0;
+		int i = 0;
+		while (i < vector3.length) {
+			if (vector1[j] < vector2[j]) {
+				vector3[i] = vector1[j];
+				i++;
+				vector3[i] = vector2[j];
+				j++;
+			} else if (vector1[j] > vector2[j]) {
+				vector3[i] = vector2[j];
+				i++;
+				vector3[i] = vector1[j];
+				j++;
+			} else {
+				vector3[i] = vector1[j];
+				i++;
 				vector3[i] = vector2[j];
 				j++;
 			}
 		}
 		System.out.println("O 1° vetor é: ");
-		for (int i = 0 ; i < vector1.length ; i++) {
+		for (i = 0 ; i < vector1.length ; i++) {
 			System.out.println(vector1[i] + " ");
 		}
 		System.out.println("O 2° vetor é: ");
-		for (int i = 0 ; i < vector2.length ; i++) {
+		for (i = 0 ; i < vector2.length ; i++) {
 			System.out.println(vector2[i] + " ");
 		}
 		System.out.println("O 3° vetor é: ");
-		for (int i = 0 ; i < vector3.length ; i++) {
+		for (i = 0 ; i < vector3.length ; i++) {
 			System.out.println(vector3[i] + " ");
 		}
 		
