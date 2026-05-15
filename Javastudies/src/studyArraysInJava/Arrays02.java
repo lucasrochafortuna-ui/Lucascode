@@ -2,10 +2,10 @@ package studyArraysInJava;
 
 import java.util.Scanner;
 
-public class Arrays2 {
+public class Arrays02 {
 
 	public static void main(String[] args) {
-		// training 2
+		// training 2 (multiply terms of vector)
 		Scanner sc = new Scanner(System.in);
 		
 		//lê 8 números digitados pelo usuario e os multiplica  

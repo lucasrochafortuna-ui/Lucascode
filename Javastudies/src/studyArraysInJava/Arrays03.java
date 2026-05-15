@@ -2,7 +2,7 @@ package studyArraysInJava;
 
 import java.util.Scanner;
 
-public class Arrays3 {
+public class Arrays03 {
 
 	public static void main(String[] args) {
 		// training 3 (calculating new vector)
