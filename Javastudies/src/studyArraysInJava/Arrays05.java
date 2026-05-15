@@ -8,9 +8,9 @@ public class Arrays05 {
 		// training 5
 		Scanner sc = new Scanner(System.in);
 		
-		int[] vector1 = new int [10];
-		int[] vector2 = new int [10];
-		int[] vector3 = new int [20];
+		int[] vector1 = new int [2];
+		int[] vector2 = new int [2];
+		int[] vector3 = new int [4];
 		int cont = 0;
 		
 		System.out.println("Informe 10 valores em ordem crescente: ");
@@ -19,8 +19,14 @@ public class Arrays05 {
 			if (vector1[i] > cont) {
 				cont = vector1[i];
 				vector1[i] = cont;
-			} else {
+			} else if (vector1[i] < cont){
 				System.out.println("Número inválido");
+				i--;
+				continue;
+			}else {
+				System.out.println("Números iguais, repita");
+				i--;
+				continue;
 			}
 		}
 		System.out.println("Informe 10 valores em ordem crescente: ");
@@ -29,38 +35,36 @@ public class Arrays05 {
 			if (vector2[i] > cont) {
 				cont = vector2[i];
 				vector2[i] = cont;
-			} else {
+			} else if (vector2[i] < cont){
 				System.out.println("Número inválido");
+				i--;
+				continue;
+			} else {
+				System.out.println("Números iguais, repita");
+				i--;
+				continue;
 			}
 		}
 		for (int i = 0 ; i < vector3.length; i++) {
-			for (i = 0 ; i < vector3.length / 2 ; i++) {
-				if (vector1[i] < vector2[i]) {
-					vector3[i] = vector1[i];
-				} else if (vector1[i] > vector2[i]) {
-					vector3[i] = vector2[i];
-				}
+			for (i = 0 ; i < 2; i++) {
+				vector3[i] = vector1[i];
 			}
-			for (i = 10 ; i < vector3.length ; i++) {
-				int j = 0;
-				if (vector1[j] > vector2[j]) {
-					vector3[i] = vector1[j];
-				} else if (vector1[j] < vector2[j]) {
-					vector3[i] = vector2[j];
-				}
+			int j = 0;
+			for (i = 2 ; i < 4; i++) {
+				vector3[i] = vector2[j];
 				j++;
 			}
 		}
+		System.out.println("O 1° vetor é: ");
 		for (int i = 0 ; i < vector1.length ; i++) {
-			System.out.println("O 1° vetor é: ");
-			System.out.print(vector1[i] + " ");
+			System.out.println(vector1[i] + " ");
 		}
+		System.out.println("O 2° vetor é: ");
 		for (int i = 0 ; i < vector2.length ; i++) {
-			System.out.println("O 2° vetor é: ");
-			System.out.print(vector2[i] + " ");
+			System.out.println(vector2[i] + " ");
 		}
+		System.out.println("O 3° vetor é: ");
 		for (int i = 0 ; i < vector3.length ; i++) {
-			System.out.println("O 3° vetor é: ");
 			System.out.println(vector3[i] + " ");
 		}
 		
