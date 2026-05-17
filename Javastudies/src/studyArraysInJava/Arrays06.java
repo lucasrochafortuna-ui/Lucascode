@@ -34,6 +34,8 @@ public class Arrays06 {
 		for (int i = 0 ; i < vector.length ; i++) {
 			if (i == vector.length - 1) {
 				System.out.println("O maior número digitado foi: " + vector[i]);
+			} else if (i == 0) {
+				System.out.println("O menor número digitado foi: " + vector[i]);
 			}
 		}
 		
