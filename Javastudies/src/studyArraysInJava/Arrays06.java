@@ -15,14 +15,13 @@ public class Arrays06 {
 		for (int i = 0 ; i < vector.length ; i++) {
 			vector[i] = sc.nextInt();
 		}
-		int j = 0, cont = 0;
+		int j = 0;
 		for (int i = 0 ; i < vector.length ; i++) {
 			for (j = 0 ; j < vector.length - 1 - i ; j++) {
 				if (vector[j] > vector[j + 1]) {
 					int temp = vector[j];
 					vector[j] = vector[j + 1];
 					vector[j + 1] = temp;
-					cont++;
 				}
 			}
 		}
