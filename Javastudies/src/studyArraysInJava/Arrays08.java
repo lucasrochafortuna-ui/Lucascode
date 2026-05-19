@@ -26,13 +26,14 @@ public class Arrays08 {
 			}
 		}
 		int tamanho = 0;
-		for (int i = 0 ; i < vector1.length; i++) {
+		for (int i = 0 ; i < vector1.length ; i++) {
 			if (i > 0 && vector1[i] == vector1[i - 1]) {
 				continue;
 			} else {
 				vector2[tamanho] = vector1[i];
 				tamanho++;
 			}
+			
 		}
 		System.out.println("O vetor 1 é: ");
 		for (int i = 0; i < vector1.length ; i++) {
