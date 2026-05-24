@@ -13,6 +13,7 @@ public class Arrays10 {
 		System.out.println("Informe o tamanho do segundo vetor");
 		int[] vector2 = new int [sc.nextInt()];
 		System.out.println("Informe os números que estarão no 1° vetor");
+		System.out.println("Digite 999 para sair");
 		int cont1 = 0, cont2 = 0;
 		for (int i = 0 ; i < vector1.length ; i++) {
 			vector1[i] = sc.nextInt();
@@ -26,6 +27,7 @@ public class Arrays10 {
 			cont1++;
 		}
 		System.out.println("Informe os números que estarão no 2° vetor");
+		System.out.println("Digite 999 para sair");
 		for (int i = 0 ; i < vector2.length ; i++) {
 			vector2[i] = sc.nextInt();
 			if (vector2[i] == 999) {
@@ -43,10 +45,10 @@ public class Arrays10 {
 		for (int i = 0; i < cont1 ; i++) {
 			vector3[i] = vector1[i];
 		}
-		int p = 0;	
+		int tamanho = 0;	
 		for (int i = cont1 ; i < vector3.length ; i++) {
-			vector3[i] = vector2[p];
-			p++;
+			vector3[i] = vector2[tamanho];
+			tamanho++;
 		}
 				
 		for (int i = 0 ; i < vector3.length ; i++) {
@@ -58,7 +60,7 @@ public class Arrays10 {
 				}
 			}
 		}
-		int tamanho = 0;
+		tamanho = 0;
 		for (int i = 0 ; i < vector3.length; i++) {
 			if (i > 0 && vector3[i] == vector3[i - 1]) {
 				continue;
@@ -70,20 +72,19 @@ public class Arrays10 {
 		for (int i = 0 ; i < tamanho ; i++) {
 			System.out.println(vector3[i]);
 		}
+		
 		int tamanho2 = 0;
 		int[] vector4 = new int [cont1];
-		boolean v = false;
 		for (int i = 0 ; i < cont1; i++) {
-			for (int j = 0 ; j < cont1 ; j++) {
-				if (j > 0 && vector1[i] == vector2[j]) {
-					v = false;
+			tamanho = 0;
+			for (int j = 0 ; j < cont2; j++) {
+				if (vector1[i] == vector2[j]) {
+					tamanho++;
 					continue;
-				} else {
-					v = true;
 				}
 			}
-			if (v) {
-				vector4[i] = vector1[i];
+			if (tamanho < 1) {
+				vector4[tamanho2] = vector1[i];
 				tamanho2++;
 			}
 		}
