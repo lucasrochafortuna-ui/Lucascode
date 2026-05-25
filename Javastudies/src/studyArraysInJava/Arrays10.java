@@ -12,9 +12,8 @@ public class Arrays10 {
 		int[] vector1 = new int [sc.nextInt()];
 		System.out.println("Informe o tamanho do segundo vetor");
 		int[] vector2 = new int [sc.nextInt()];
-		System.out.println("Informe os números que estarão no 1° vetor");
-		System.out.println("Digite 999 para sair");
-		int cont1 = 0, cont2 = 0;
+		System.out.println("Informe os números que estarão no 1° vetor\nDigite 999 para sair");
+		int cont1 = 0, cont2 = 0, vet1 = 0, vet2 = 0;
 		for (int i = 0 ; i < vector1.length ; i++) {
 			vector1[i] = sc.nextInt();
 			if (vector1[i] == 999) {
@@ -26,8 +25,23 @@ public class Arrays10 {
 			}
 			cont1++;
 		}
-		System.out.println("Informe os números que estarão no 2° vetor");
-		System.out.println("Digite 999 para sair");
+		for (int i = 0 ; i < cont1 ; i++) {
+			for (int j = 0 ; j < cont1 - i - 1; j++) {
+				if (vector1[j] > vector1[j + 1]) {
+					int temp = vector1[j];
+					vector1[j] = vector1[j + 1];
+					vector1[j + 1] = temp;
+				}
+			}
+		}
+		for (int i = 0 ; i < cont1 ; i++) {
+			if (i > 0 && vector1[i] == vector1[i - 1]) {
+				continue;
+			}
+			vector1[vet1] = vector1[i];
+			vet1++;
+		}
+		System.out.println("Informe os números que estarão no 2° vetor\nDigite 999 para sair");
 		for (int i = 0 ; i < vector2.length ; i++) {
 			vector2[i] = sc.nextInt();
 			if (vector2[i] == 999) {
@@ -39,8 +53,24 @@ public class Arrays10 {
 			}
 			cont2++;
 		}
+		for (int i = 0 ; i < cont1 ; i++) {
+			for (int j = 0 ; j < cont1 - i - 1; j++) {
+				if (vector2[j] > vector2[j + 1]) {
+					int temp = vector2[j];
+					vector2[j] = vector2[j + 1];
+					vector2[j + 1] = temp;
+				}
+			}
+		}
+		for (int i = 0 ; i < cont2 ; i++) {
+			if (i > 0 && vector2[i] == vector2[i - 1]) {
+				continue;
+			}
+			vector2[vet2] = vector2[i];
+			vet2++;
+		}
 		
-		int[] vector3 = new int [cont1 + cont2];
+		int[] vector3 = new int [vet1 + vet2];
 		
 		for (int i = 0; i < cont1 ; i++) {
 			vector3[i] = vector1[i];
@@ -74,8 +104,8 @@ public class Arrays10 {
 		}
 		
 		int tamanho2 = 0;
-		int[] vector4 = new int [cont1];
-		for (int i = 0 ; i < cont1; i++) {
+		int[] vector4 = new int [vet1];
+		for (int i = 0 ; i < vet1; i++) {
 			tamanho = 0;
 			for (int j = 0 ; j < cont2; j++) {
 				if (vector1[i] == vector2[j]) {
