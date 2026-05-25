@@ -72,11 +72,11 @@ public class Arrays10 {
 		
 		int[] vector3 = new int [vet1 + vet2];
 		
-		for (int i = 0; i < cont1 ; i++) {
+		for (int i = 0; i < vet1 ; i++) {
 			vector3[i] = vector1[i];
 		}
 		int tamanho = 0;	
-		for (int i = cont1 ; i < vector3.length ; i++) {
+		for (int i = vet1 ; i < vector3.length ; i++) {
 			vector3[i] = vector2[tamanho];
 			tamanho++;
 		}
