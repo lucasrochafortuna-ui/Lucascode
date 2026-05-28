@@ -45,13 +45,16 @@ Obs: anagramas: palavras que tem as mesmas letras
 Ex: ALMA e LAMA são anagramas
 BOLA e LOBO não são anagramas
 9. Escreva um programa que leia duas seqüências de até 10 elementos de númerosinteiros e positivos (o número 999 indica o término de cada seqüência). Em seguida ele deve gerar um vetor C que seja a união entre estas duas seqüências iniciais e um vetor D com os elementos do vetor A que não existem no vetor B (A complementar B).
-Obs: Um vetor não deverá conter elementos repetidos. No entanto poderão existir
-elementos de um vetor repetidos em outro vetor.
+Obs: Um vetor não deverá conter elementos repetidos. No entanto poderão existir elementos de um vetor repetidos em outro vetor.
 10. Escreva um programa C que ordena um vetor de 5 posições e imprime o vetor ordenado.
 11. Escrever um programa que some duas matrizes A e B, colocando o resultado numa matriz C. (tamanho de A, B, e C = 3 linhas por 2 colunas).
 12. Escrever um programa que leia os elementos de uma matriz M (5,2) e imprime como resultado o produto dos elementos desta matriz.
 13. Escrever um programa que leia os elementos (números inteiros) de uma matriz M(3,5).
 O programa a seguir deve ler um número inteiro X e procura este elemento na matriz M. Se o elemento for encontrado, imprimir a linha e a coluna (posição do elemento na matriz), caso contrário imprimir “Elemento não encontrado”.
+14. Escrever um programa que leia os elementos (números inteiros e positivos) de uma matriz Z(3,4), calcule e imprima o maior e o menor elemento desta matriz, seguido da posição em que eles se encontram.
+15. Escrever um programa que multiplique duas matrizes A e B de mesmo tamanho, colocando o resultado numa matriz C.
+16. Escrever um programa Pascal que leia uma matriz A de 4 linhas e 4 colunas. A seguir este programa deverá calcular a soma dos elementos da sua diagonal principal e mostrar o resultado.
+17. Escrever um programa Pascal que leia uma matriz A de 4 linhas e 4 colunas. A seguir este programa deverá calcular a soma dos elementos da sua diagonal secundária e mostrar o resultado.
 
 
 ## Autor
