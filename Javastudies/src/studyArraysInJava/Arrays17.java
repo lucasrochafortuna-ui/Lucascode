@@ -15,7 +15,7 @@ public class Arrays17 {
 		for (int i = 0 ; i < vector.length ; i++) {
 			for (int j = 0 ; j < vector[i].length ; j++) {
 				vector[i][j] = sc.nextInt();
-				if (i + j == vector.length + 1) {
+				if (i + j == vector.length - 1) {
 					cont += vector[i][j];
 				}
 			}
