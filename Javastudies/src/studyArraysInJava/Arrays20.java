@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class Arrays20 {
 	//JOGO DA VELHA
 	static void tabuleiro(String[][] vector) {
+		//FUNÇÂO QUE MONTA E IMPRIME O JOGO DA VELHA
 		for (int i = 0 ; i < vector.length ; i++) {
 			for (int j = 0 ; j < vector[i].length ; j++) {
 				System.out.print("|");
@@ -31,16 +32,15 @@ public class Arrays20 {
 		while (vencedor != true) {
 			//PEDE A JOGADA DO JODADOR 1
 			System.out.println("Jogador 1: Informe a sua jogada por linha e coluna\nUtilizando 1, 2 e 3");
-			//Verifica se oque foi digitado é o número 1, 2 ou 3, se não ele pede para digitar o número novamente
-			int linha = verificadordejogada(sc, "LINHA: ") - 1;
-			int coluna = verificadordejogada(sc, "COLUNA: ") - 1;
-			//Verifica se a casa digitada já esta ocupada
+			//VERIFICA A JOGADO SE SERÁ 1, 2 OU 3
+			int linha = validadordejogada(sc, "LINHA: ") - 1;
+			int coluna = validadordejogada(sc, "COLUNA: ") - 1;
+			// VERIFICA SE O JOGADOR 1 ESTÁ JOGANDO EM UMA CASA VAZIA DO JOGO DA VELHA
 			if (!vector[linha][coluna].equals(" ")) {
-				System.out.println("Casa já ocupada");
+				System.out.println("Casa já ocupada!");
 				continue;
-			} else {
-				vector[linha][coluna] = marcardor1;
 			}
+			vector[linha][coluna] = marcardor1;
 			tabuleiro(vector);
 			cont++;
 			//VERIFICA SE O JOGADOR 1 GANHOU
@@ -59,12 +59,13 @@ public class Arrays20 {
 			//PEDE A JOGADA DO JOGADOR 2
 			System.out.println("Jogador 2: Informe a sua jogada por linha e coluna\nUtilizando 1, 2 e 3");
 			while (true) {
-				//Verifica se oque foi digitado é o número 1, 2 ou 3, se não ele pede para digitar o número novamente
-				linha = verificadordejogada(sc, "LINHA: ") - 1;
-				coluna = verificadordejogada(sc, "COLUNA: ") - 1;
-				//Verifica se a casa digitada já esta ocupada
+				//VERIFICA A JOGADO SE SERÁ 1, 2 OU 3
+				linha = validadordejogada(sc, "LINHA: ") - 1;
+				coluna = validadordejogada(sc, "COLUNA: ") - 1;
+				// VERIFICA SE O JOGADOR 2 ESTÁ JOGANDO EM UMA CASA VAZIA DO JOGO DA VELHA
 				if (!vector[linha][coluna].equals(" ")) {
-					System.out.println("Casa já ocupada");
+					System.out.println("Casa já ocupada!");
+					continue;
 				} else {
 					vector[linha][coluna] = marcardor2;
 					break;
@@ -94,8 +95,9 @@ public class Arrays20 {
 		}
 		sc.close();
 	}
-	public static int verificadordejogada(Scanner sc, String mensagem) {
-		while(true) {
+	// FUNÇÂO QUE VERIFICA SE OQUE FOI DIGITADO PELO USUÁRIO SEGUE AS REGRAS DO JOGO DA VELHA 
+	public static int validadordejogada (Scanner sc, String mensagem) {
+		while (true) {
 			System.out.println(mensagem);
 			if (sc.hasNextInt()) {
 				int valor = sc.nextInt();
