@@ -21,7 +21,7 @@ public class Arrays20 {
 		boolean vencedor = false;
 		String marcardor1 = "X";
 		String marcardor2 = "O";
-		//MOSTRA O TABULEIRO
+		//MOSTRA O TABULEIRO TOTALMENTE VAZIO
 		for (int i = 0 ; i < vector.length ; i++) {
 			for (int j = 0 ; j < vector[i].length ; j++) {
 				vector[i][j] = " ";
@@ -32,7 +32,7 @@ public class Arrays20 {
 		while (vencedor != true) {
 			//PEDE A JOGADA DO JODADOR 1
 			System.out.println("Jogador 1: Informe a sua jogada por linha e coluna\nUtilizando 1, 2 e 3");
-			//VERIFICA A JOGADA SE SERÁ 1, 2 OU 3
+			//VERIFICA SE A JOGADA SERÁ 1, 2 OU 3
 			int linha = validadordejogada(sc, "LINHA: ") - 1;
 			int coluna = validadordejogada(sc, "COLUNA: ") - 1;
 			// VERIFICA SE O JOGADOR 1 ESTÁ JOGANDO EM UMA CASA VAZIA DO JOGO DA VELHA
@@ -59,7 +59,7 @@ public class Arrays20 {
 			//PEDE A JOGADA DO JOGADOR 2
 			System.out.println("Jogador 2: Informe a sua jogada por linha e coluna\nUtilizando 1, 2 e 3");
 			while (true) {
-				//VERIFICA A JOGADA SE SERÁ 1, 2 OU 3
+				//VERIFICA SE A JOGADA SERÁ 1, 2 OU 3
 				linha = validadordejogada(sc, "LINHA: ") - 1;
 				coluna = validadordejogada(sc, "COLUNA: ") - 1;
 				// VERIFICA SE O JOGADOR 2 ESTÁ JOGANDO EM UMA CASA VAZIA DO JOGO DA VELHA
@@ -95,7 +95,7 @@ public class Arrays20 {
 		}
 		sc.close();
 	}
-	// FUNÇÂO QUE VERIFICA SE OQUE FOI DIGITADO PELO USUÁRIO SEGUE AS REGRAS DO JOGO DA VELHA 
+	// FUNÇÂO QUE VERIFICA SE A JOGADA QUE FOI DIGITADA PELO USUÁRIO SEGUE AS REGRAS DO JOGO DA VELHA 
 	public static int validadordejogada (Scanner sc, String mensagem) {
 		while (true) {
 			System.out.println(mensagem);
