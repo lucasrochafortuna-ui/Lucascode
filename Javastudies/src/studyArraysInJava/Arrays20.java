@@ -56,6 +56,11 @@ public class Arrays20 {
 				vencedor = true;
 				break;
 			}
+			if (cont >= 9) {
+				System.out.println("A partida deu velha");
+				vencedor = true;
+				break;
+			}
 			//PEDE A JOGADA DO JOGADOR 2
 			System.out.println("Jogador 2: Informe a sua jogada por linha e coluna\nUtilizando 1, 2 e 3");
 			while (true) {
@@ -87,11 +92,6 @@ public class Arrays20 {
 				break;
 			}
 			//VERIFICA SE TODAS AS CASAS FORAM PREENCHIDAS SEM ALGUM JOGADOR GANHAR
-			if (cont == 9) {
-				System.out.println("A partida deu velha");
-				vencedor = true;
-				break;
-			}
 		}
 		sc.close();
 	}
@@ -101,7 +101,7 @@ public class Arrays20 {
 			System.out.println(mensagem);
 			if (sc.hasNextInt()) {
 				int valor = sc.nextInt();
-				if (valor < 1 | valor > 3) {
+				if (valor < 1 || valor > 3) {
 					System.out.println("Número invalido\nInforme um número entre 1, 2 e 3");
 				} else {
 					return valor;
