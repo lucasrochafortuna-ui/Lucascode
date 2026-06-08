@@ -3,6 +3,7 @@ package studyArraysInJava;
 import java.util.Scanner;
 
 public class Arrays20 {
+	//JOGO DA VELHA
 	static void tabuleiro(String[][] vector) {
 		for (int i = 0 ; i < vector.length ; i++) {
 			for (int j = 0 ; j < vector[i].length ; j++) {
@@ -32,6 +33,7 @@ public class Arrays20 {
 			System.out.println("Jogador 1: Informe a sua jogada por linha e coluna\nUtilizando 1, 2 e 3");
 			int linha = sc.nextInt() - 1;
 			int coluna = sc.nextInt() - 1;
+			verificadordejogada(sc, "Linha: ");
 			vector[linha][coluna] = marcardor1;
 			tabuleiro(vector);
 			cont++;
@@ -76,5 +78,21 @@ public class Arrays20 {
 			}
 		}
 		sc.close();
+	}
+	public static int verificadordejogada(Scanner sc, String mensagem) {
+		while(true) {
+			if (sc.hasNextInt()) {
+				int valor = sc.nextInt();
+				System.out.println(mensagem);
+				if (valor < 1 | valor > 3) {
+					System.out.println("Número invalido\nInforme um número entre 1, 2 e 3");
+				} else {
+					return valor;
+				}
+			} else {
+				System.out.println("Número invalido\nInforme um número entre 1, 2 e 3");
+				sc.next();
+			}
+		}
 	}
 }
