@@ -31,10 +31,14 @@ public class Arrays20 {
 		while (vencedor != true) {
 			//PEDE A JOGADA DO JODADOR 1
 			System.out.println("Jogador 1: Informe a sua jogada por linha e coluna\nUtilizando 1, 2 e 3");
-			int linha = sc.nextInt() - 1;
-			int coluna = sc.nextInt() - 1;
-			verificadordejogada(sc, "Linha: ");
-			vector[linha][coluna] = marcardor1;
+			int linha = verificadordejogada(sc, "LINHA: ") - 1;
+			int coluna = verificadordejogada(sc, "COLUNA: ") - 1;
+			if (!vector[linha][coluna].equals(" ")) {
+				System.out.println("Casa já ocupada");
+				continue;
+			} else {
+				vector[linha][coluna] = marcardor1;
+			}
 			tabuleiro(vector);
 			cont++;
 			//VERIFICA SE O JOGADOR 1 GANHOU
@@ -52,9 +56,16 @@ public class Arrays20 {
 			}
 			//PEDE A JOGADA DO JOGADOR 2
 			System.out.println("Jogador 2: Informe a sua jogada por linha e coluna\nUtilizando 1, 2 e 3");
-			linha = sc.nextInt() - 1;
-			coluna = sc.nextInt() - 1;
-			vector[linha][coluna] = marcardor2;
+			while (true) {
+				linha = verificadordejogada(sc, "LINHA: ") - 1;
+				coluna = verificadordejogada(sc, "COLUNA: ") - 1;
+				if (!vector[linha][coluna].equals(" ")) {
+					System.out.println("Casa já ocupada");
+				} else {
+					vector[linha][coluna] = marcardor2;
+					break;
+				}
+			}
 			tabuleiro(vector);
 			cont++;
 			//VERIFICA SE O JOGADOR 2 GANHOU
@@ -81,9 +92,9 @@ public class Arrays20 {
 	}
 	public static int verificadordejogada(Scanner sc, String mensagem) {
 		while(true) {
+			System.out.println(mensagem);
 			if (sc.hasNextInt()) {
 				int valor = sc.nextInt();
-				System.out.println(mensagem);
 				if (valor < 1 | valor > 3) {
 					System.out.println("Número invalido\nInforme um número entre 1, 2 e 3");
 				} else {
