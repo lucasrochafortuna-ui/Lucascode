@@ -32,7 +32,7 @@ public class Arrays20 {
 		while (vencedor != true) {
 			//PEDE A JOGADA DO JODADOR 1
 			System.out.println("Jogador 1: Informe a sua jogada por linha e coluna\nUtilizando 1, 2 e 3");
-			//VERIFICA A JOGADO SE SERÁ 1, 2 OU 3
+			//VERIFICA A JOGADA SE SERÁ 1, 2 OU 3
 			int linha = validadordejogada(sc, "LINHA: ") - 1;
 			int coluna = validadordejogada(sc, "COLUNA: ") - 1;
 			// VERIFICA SE O JOGADOR 1 ESTÁ JOGANDO EM UMA CASA VAZIA DO JOGO DA VELHA
@@ -59,7 +59,7 @@ public class Arrays20 {
 			//PEDE A JOGADA DO JOGADOR 2
 			System.out.println("Jogador 2: Informe a sua jogada por linha e coluna\nUtilizando 1, 2 e 3");
 			while (true) {
-				//VERIFICA A JOGADO SE SERÁ 1, 2 OU 3
+				//VERIFICA A JOGADA SE SERÁ 1, 2 OU 3
 				linha = validadordejogada(sc, "LINHA: ") - 1;
 				coluna = validadordejogada(sc, "COLUNA: ") - 1;
 				// VERIFICA SE O JOGADOR 2 ESTÁ JOGANDO EM UMA CASA VAZIA DO JOGO DA VELHA
