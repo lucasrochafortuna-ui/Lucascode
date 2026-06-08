@@ -31,8 +31,10 @@ public class Arrays20 {
 		while (vencedor != true) {
 			//PEDE A JOGADA DO JODADOR 1
 			System.out.println("Jogador 1: Informe a sua jogada por linha e coluna\nUtilizando 1, 2 e 3");
+			//Verifica se oque foi digitado é o número 1, 2 ou 3, se não ele pede para digitar o número novamente
 			int linha = verificadordejogada(sc, "LINHA: ") - 1;
 			int coluna = verificadordejogada(sc, "COLUNA: ") - 1;
+			//Verifica se a casa digitada já esta ocupada
 			if (!vector[linha][coluna].equals(" ")) {
 				System.out.println("Casa já ocupada");
 				continue;
@@ -57,8 +59,10 @@ public class Arrays20 {
 			//PEDE A JOGADA DO JOGADOR 2
 			System.out.println("Jogador 2: Informe a sua jogada por linha e coluna\nUtilizando 1, 2 e 3");
 			while (true) {
+				//Verifica se oque foi digitado é o número 1, 2 ou 3, se não ele pede para digitar o número novamente
 				linha = verificadordejogada(sc, "LINHA: ") - 1;
 				coluna = verificadordejogada(sc, "COLUNA: ") - 1;
+				//Verifica se a casa digitada já esta ocupada
 				if (!vector[linha][coluna].equals(" ")) {
 					System.out.println("Casa já ocupada");
 				} else {
