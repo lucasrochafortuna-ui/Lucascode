@@ -12,11 +12,7 @@ public class Arrays18 {
 		System.out.println("Informe o tamanho de uma matriz (linha/coluna)");
 		int[][] vector = new int [sc.nextInt()][sc.nextInt()];
 		System.out.println("Informe os números que estarão na matriz");
-		for (int i = 0 ; i < vector.length ; i++) {
-			for (int j = 0 ; j < vector[i].length ; j++) {
-				vector[i][j] = sc.nextInt();
-			}
-		}
+		montadordematriz(vector, sc);
 		System.out.println("A matriz normal ficará: ");
 		for (int i = 0 ; i < vector.length ; i++) {
 			System.out.println(Arrays.toString(vector[i]));
@@ -29,6 +25,13 @@ public class Arrays18 {
 		}
 		
 		sc.close();
+	}
+	static void montadordematriz (int[][] matriz, Scanner sc) {
+		for (int i = 0 ; i < matriz.length ; i++) {
+			for (int j = 0 ; j < matriz[i].length ; j++) {
+				matriz[i][j] = sc.nextInt();
+			}
+		}
 	}
 
 }

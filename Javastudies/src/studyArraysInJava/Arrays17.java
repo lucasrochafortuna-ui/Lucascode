@@ -12,17 +12,21 @@ public class Arrays17 {
 		int[][] vector = new int [sc.nextInt()][sc.nextInt()];
 		int cont = 0;
 		System.out.println("Informe os números que estarão na matriz");
-		for (int i = 0 ; i < vector.length ; i++) {
-			for (int j = 0 ; j < vector[i].length ; j++) {
-				vector[i][j] = sc.nextInt();
-				if (i + j == vector.length - 1) {
-					cont += vector[i][j];
-				}
-			}
-		}
+		cont = montadordematriz(sc, vector, cont);
 		System.out.println("O valor da soma da digonal secundaria é " + cont);
 		
 		sc.close();
+	}
+	public static int montadordematriz (Scanner sc, int[][] matriz, int cont) {
+		for (int i = 0 ; i < matriz.length ; i++) {
+			for (int j = 0 ; j < matriz[i].length ; j++) {
+				matriz[i][j] = sc.nextInt();
+				if (i + j == matriz.length - 1) {
+					cont += matriz[i][j];
+				}
+			}
+		}
+		return cont;
 	}
 
 }
