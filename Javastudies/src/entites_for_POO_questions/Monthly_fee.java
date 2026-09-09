@@ -47,7 +47,7 @@ public class Monthly_fee {
 		}
 	}
 	public void Pagamento() {
-		System.out.println("Você pagará: " + this.pay * (this.percent/100) + " Reais");
+		System.out.println("Você pagará: " + (this.pay * (this.percent/100)) + " Reais");
 	}
 	
 	

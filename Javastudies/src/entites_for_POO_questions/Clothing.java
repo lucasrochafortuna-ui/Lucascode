@@ -5,33 +5,40 @@ public class Clothing {
 	private double price;
 	private int quantity;
 
+	public Clothing() {
+		this ("Desconhecido " , 0.0 , 0);
+	}
+	
 	public Clothing(String menu, double price, int quantity) {
-		this ("Desconhecido " + 0.0 + 0);
+		this.menu = menu;
+		this.price = price;
+		this.quantity = quantity;
 	}
-	
-	
-	
-	public String escolha (int menu) {
-		switch (menu) {
-		case 1: 
-			return "As camisas da insider custam 150 R$"; 
-			break;
-		case 2:
-			System.out.println("Os shorts da insider custam 80 R$");
-			break;
-		case 3:
-			System.out.println("As calças da insider custam 200 R$");
-			break;
-		case 4:
-			System.out.println("As meias da insider custam 35 R$");
-			break;
-		default:
-			System.out.println("Opção invalida");
-			menu = sc.nextInt();
-		}
+
+	public String getMenu() {
+		return menu;
 	}
-	
+
+	public void setMenu(String menu) {
+		this.menu = menu;
+	}
+
+	public double getPrice() {
+		return price;
+	}
+
+	public void setPrice(double price) {
+		this.price = price;
+	}
+
+	public int getQuantity() {
+		return quantity;
+	}
+	public void preçototal(double price, int quantity) {
+		this.quantity *= this.price;
+	}
+
 	public String toString() {
-		return "Product data: " + "\nProduto: " + menu
+		return "Product data: " + "\nProduto: " + this.menu + "\nPreço: " + this.price + "\nQuantidade: " + this.quantity;
 	}
 }
