@@ -39,6 +39,7 @@ public class Question009_POO {
 		}
 		BS.setBookname(bookname);
 		System.out.println(BS);
+		System.out.println("");
 		
 		sc.close();
 	}
