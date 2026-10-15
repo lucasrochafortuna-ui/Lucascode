@@ -14,8 +14,6 @@ public class Question011_POO {
 		// clothing store 
 		
 		String menu;
-		int quantity;
-		double price;
 		Clothing clothing = new Clothing();
 		System.out.println("|Bem vindo a loja Insider|");
 		System.out.println("Você deseja comprar: \n1 Camisa\n2 Short\3 Calça\4 Meia");
@@ -40,7 +38,7 @@ public class Question011_POO {
 			}
 			clothing.setMenu(menu);
 			System.out.println();
-			
+		sc.close();	
 		}
 	}
 
