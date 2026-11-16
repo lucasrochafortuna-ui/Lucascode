@@ -1,27 +1,23 @@
 package _POO;
 
 import entites_for_POO_questions.ContaBancaria;
+import entites_for_POO_questions.ContaEspecial;
 
 public class Question016_POO {
 	public static void main(String[] args) {
-		ContaBancaria conta = new ContaBancaria("Maria Silva", "12345-X");
-		System.out.println("Estado inicial da conta: ");
-		System.out.println("Titular " + conta.getTitular());
-		System.out.println("Número da conta " + conta.getNumeroConta());
-		System.out.println("Saldo inicial " + conta.getSaldo());
-		System.out.println("Status da conta " + conta.getAtiva());
-		conta.depositar(500);
-		System.out.println(conta.sacar(200));
-		System.out.println("Saldo da conta: " + conta.getSaldo());
-		conta.sacar(1000);
-		conta.depositar(-50);
-		System.out.println("Saldo da conta: " + conta.getSaldo());
-		conta.encerrarConta(false);
-		conta.depositar(100);
-		System.out.println("Saldo da conta: " + conta.getSaldo());
-		conta.reativarConta(true);
-		conta.depositar(100);
-		System.out.println("Saldo da conta: " + conta.getSaldo());
+		ContaBancaria conta1 = new ContaBancaria("Maria Clara", "123Conta", 200);
+		conta1.depositar(100);
+		System.out.println(conta1.getSaldo());
+		System.out.println(conta1.sacar(400));
+		System.out.println(conta1.sacar(150));
+		System.out.println(conta1.getSaldo());
+		System.out.println("---------------------------");
+		ContaEspecial conta1E = new ContaEspecial("Maria Clara", "123Conta", 200, -500);
+		System.out.println(conta1E.sacar(400));
+		System.out.println(conta1E.sacar(400));
+		System.out.println(conta1E.sacar(300));
+		conta1E.depositar(600);
+		System.out.println(conta1E.getSaldo());
 	}
 
 }

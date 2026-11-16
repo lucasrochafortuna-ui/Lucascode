@@ -12,6 +12,7 @@ public class Question017_POO {
 		int[] vector = new int[tamanho];
 		System.out.println("Digite números de no maximo até 10");
 		for (int i = 0 ; i < vector.length ; i++) {
+			System.out.println("Digite um número: ");
 			vector[i] = sc.nextInt();
 		}
 		System.out.println("Negativos: ");

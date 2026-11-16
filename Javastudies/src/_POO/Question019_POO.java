@@ -31,8 +31,7 @@ public class Question019_POO {
 				mediaAltura = mediaAltura / vector.length;
 				System.out.printf("A media das alturas é: %.2f%n", mediaAltura);
 				menorIdade = (menorIdade / vector.length) * 100;
-				System.out.printf("A porcentagem de pessoas com 16 anos ou menos é: %.2f", menorIdade );
-				System.out.println("%");
+				System.out.printf("A porcentagem de pessoas com 16 anos ou menos é: %.2f%%%n", menorIdade );
 			}
 		}
 		for (int i = 0 ; i < vector.length ; i++) {

@@ -2,17 +2,18 @@ package entites_for_POO_questions;
 
 public class ContaBancaria {
 	    private String titular;
-	    private double saldo;
+	    protected double saldo;
 	    private String numeroConta;
-	    private boolean ativa;
+	    protected boolean ativa;
 	    
 	    public ContaBancaria() {
 	    	this.ativa = true;
 	    }
 	    
-		public ContaBancaria(String titular, String numeroConta) {
+		public ContaBancaria(String titular, String numeroConta, double saldo) {
 			this.titular = titular;
 			this.numeroConta = numeroConta;
+			this.saldo = saldo;
 			this();
 		}
 
@@ -31,10 +32,13 @@ public class ContaBancaria {
 		public double getSaldo() {
 			return saldo;
 		}
+		protected void setSaldo(double saldo) {
+			this.saldo = saldo;
+		}
 		
 		public boolean sacar(double valor) {
 			if (saldo > 0 && valor <= saldo && this.ativa == true) {
-				saldo -= valor;
+				this.saldo -= valor;
 				return true;
 			} else {
 				return false;
